@@ -1,0 +1,27 @@
+import java.util.*;
+ 
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Original string : ");
+ 
+        String original = scanner.nextLine();
+   
+ 
+        String words[] = original.split("\\s");
+        String reverseString = "";
+ 
+        for (int i = 0; i < words.length; i++) 
+        {
+            String word = words[i];
+            String reverseWord = "";
+            for (int j = word.length() - 1; j >= 0; j--) {
+                reverseWord = reverseWord + word.charAt(j);
+            }
+            reverseString = reverseString + reverseWord + " ";
+        }
+ 
+       
+        System.out.print("Reversed string : " + reverseString);
+    }
+}
